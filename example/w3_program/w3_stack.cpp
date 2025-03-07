@@ -26,12 +26,14 @@ int main(void) {
     system("pause");
     return 0;
 }
+
 int choice(void) {
     int ans;
     std::cout << "1.push\n" << "2.pop\n" << "3.Exit\n" << "choice:";
     std::cin >> ans;
     return ans;
 }
+
 void printArr(int a[]) {
     std::cout << "\n" << "Array:";
     for (int i = 0; i < num; i++) std::cout << a[i] << "  ";
@@ -40,17 +42,11 @@ void printArr(int a[]) {
 }
 
 bool IsFull(void) {
-    if (
-        return false;
-    else
-        return true;
+    return (num != SIZE - 1);
 }
 
 bool IsEmpty(void) {
-    if (
-        return true;
-    else
-        return false;
+    return num == 0;
 }
 
 void push(int a[], int data) {
