@@ -1,7 +1,7 @@
 #include <cstdlib>
 #include <iostream>
 #define SIZE 5
-using namespace std;
+
 int choice(void);
 void printArr(int[]);
 bool IsFull(void);
@@ -17,8 +17,8 @@ int main(void) {
         ch = choice();
         if (ch == 3) break;
         if (ch == 1) {
-            cout << "Data:";
-            cin >> data;
+            std::cout << "Data:";
+            std::cin >> data;
             Enqueue(arr, data);
         }
         if (ch == 2) data = Dequeue(arr);
@@ -28,22 +28,25 @@ int main(void) {
 }
 int choice(void) {
     int ans;
-    cout << "1.Add(EnQ)\n" << "2.Delete(DeQ)\n" << "3.Exit\n" << "choice:";
-    cin >> ans;
+    std::cout << "1.Add(EnQ)\n" << "2.Delete(DeQ)\n" << "3.Exit\n" << "choice:";
+    std::cin >> ans;
     return ans;
 }
+
 void printArr(int a[]) {
-    cout << "\n" << "Array:";
-    for (int i = front + 1; i <= rear; i++) cout << a[i] << "  ";
-    cout << endl;
+    std::cout << "\n" << "Array:";
+    for (int i = front + 1; i <= rear; i++) std::cout << a[i] << "  ";
+    std::cout << std::endl;
     return;
 }
+
 bool IsFull(void) {
     if ()
         return false;
     else
         return true;
 }
+
 bool IsEmpty(void) {
     if ()
         return true;
