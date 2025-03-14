@@ -1,4 +1,4 @@
-#include <array>
+#include <vector>
 #include <print>
 #include <iostream>
 
@@ -48,7 +48,7 @@ public:
 private:
     static constexpr size_t capacity = 10;
     size_t size = 0;
-    std::array<int, capacity> data{};
+    std::vector<int> data{};
 };
 
 int choice() {
