@@ -41,13 +41,9 @@ void printArr(int a[]) {
     return;
 }
 
-bool IsFull(void) {
-    return (num != SIZE - 1);
-}
+bool IsFull(void) { return (num != SIZE - 1); }
 
-bool IsEmpty(void) {
-    return num == 0;
-}
+bool IsEmpty(void) { return num == 0; }
 
 void push(int a[], int data) {
     if (IsFull()) {

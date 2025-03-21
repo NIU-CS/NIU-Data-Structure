@@ -1,6 +1,6 @@
-#include <vector>
-#include <print>
 #include <iostream>
+#include <print>
+#include <vector>
 
 class stack {
 public:

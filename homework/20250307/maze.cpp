@@ -24,7 +24,7 @@ bool visit(v2i &graph, pair start, pair end) {
 
         if (current == end) {
             path.push_back(current);
-            for (auto& p : path) {
+            for (auto &p : path) {
                 graph[p.first][p.second] = 2;
             }
             flag = true;

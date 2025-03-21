@@ -1,12 +1,10 @@
-#include <vector>
-#include <print>
 #include <iostream>
+#include <print>
+#include <vector>
 
 class queue {
 public:
-    queue() : front(0), rear(0), size(0) {
-        data.resize(10);
-    }
+    queue() : front(0), rear(0), size(0) { data.resize(10); }
 
     void print() const {
         std::print("[");
@@ -59,7 +57,6 @@ private:
     int rear = 0;
     int size = 0;
     std::vector<int> data;
-
 };
 
 int choice() {
