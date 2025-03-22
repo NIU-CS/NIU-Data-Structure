@@ -29,6 +29,27 @@ public:
         std::cout << "nullptr" << std::endl;
     }
 
+    void delete_node(int value) {
+        if (!head) return;
+
+        if (head->val == value) {
+            head = std::move(head->next);
+            return;
+        }
+
+        ListNode* prev = head.get();
+        ListNode* curr = head->next.get();
+
+        while (curr) {
+            if (curr->val == value) {
+                prev->next = std::move(curr->next);
+                return;
+            }
+            prev = curr;
+            curr = curr->next.get();
+        }
+    }
+
 private:
     std::unique_ptr<ListNode> head;
 };
